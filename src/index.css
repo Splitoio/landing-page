@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-light {
+  position: relative;
+  padding: 1.5px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(#000, #000) padding-box,
+    linear-gradient(to right, transparent, rgba(255, 0, 82, 0.5)) border-box;
+}
+
+.animate-border-light::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #ff0052 60deg,
+    transparent 90deg,
+    transparent 360deg
+  );
+  animation: rotate 6s linear infinite;
+  width: 400%;
+  height: 400%;
+  opacity: 0.3;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  cursor: url("/cursor.svg"), auto;
+}
+
+.bg-gradient-dark {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.input-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(20, 20, 20, 1);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 4px #ff0052, 0 0 8px #ff0052;
+  }
+  50% {
+    box-shadow: 0 0 8px #ff0052, 0 0 16px #ff0052;
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+}
+
+@keyframes float-2 {
+  0%,
+  100% {
+    transform: translateX(-50%) translate(0, 0);
+  }
+  50% {
+    transform: translateX(-50%) translate(0, -8px);
+  }
+}
+
+@keyframes float-3 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+}
+
+@keyframes float-4 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-8px, 5px);
+  }
+}
+
+@keyframes float-5 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+}
+
+@keyframes float-6 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(8px, 5px);
+  }
+}
+
+.animate-float-1 {
+  animation: float-1 3s ease-in-out infinite;
+}
+.animate-float-2 {
+  animation: float-2 4s ease-in-out infinite;
+}
+.animate-float-3 {
+  animation: float-3 3.5s ease-in-out infinite;
+}
+.animate-float-4 {
+  animation: float-4 4.5s ease-in-out infinite;
+}
+.animate-float-5 {
+  animation: float-5 3.8s ease-in-out infinite;
+}
+.animate-float-6 {
+  animation: float-6 4.2s ease-in-out infinite;
+}
+
+/* Webkit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
