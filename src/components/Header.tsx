@@ -14,7 +14,7 @@ export default function Header() {
         Get early access
       </h1>
       <p className="text-zinc-500 text-l mt-2">
-        Simplify shared expenses, settle on-chain effortlessly
+        Simplify shared expenses, settle on-chain effortlessly on Stellar!
       </p>
     </div>
   );

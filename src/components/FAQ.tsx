@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "What currencies are supported?",
     answer:
-      "Currently Currencies on Stellar - XLM, USDC, USDT, ETH are supported. We'll add multiple chains soon.",
+      "Currently Currencies on Stellar or Wrapped Stellar are supported.",
   },
   {
     question: "Is there a fee for transactions?",
