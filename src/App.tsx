@@ -20,7 +20,7 @@ function App() {
         <WaitlistForm />
         <FeatureCards />
         <FAQ />
-        <div className="text-center text-zinc-400 text-sm">© 2024 Splito</div>
+        <div className="text-center text-zinc-400 text-sm">© 2025 Splito</div>
       </div>
     </div>
   );
