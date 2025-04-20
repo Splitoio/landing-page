@@ -66,7 +66,7 @@ export default function WaitlistForm() {
   };
 
   return (
-    <div className="text-center mb-24">
+    <div className="text-center mb-7">
       <div className="max-w-xl mx-auto">
         <div className="animate-border-light">
           <div className="input-container flex flex-col sm:flex-row gap-2 p-2">
