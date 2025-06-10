@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Button } from "./Button";
 import BgPattern from "@/assets/splito-patterns.png";
 import HeroBg from "@/assets/hero-bg-2.png";
+import Link from "next/link";
+import { getDashboardUrl } from "@/utils";
 
 export default function HeroSection() {
   return (
@@ -41,9 +43,12 @@ export default function HeroSection() {
 
         {/* CTA Button */}
         <div className="flex justify-center mb-12">
-          <Button size="lg" variant="primary">Get started with Splito</Button>
+          <Link href={getDashboardUrl()}>
+            <Button size="lg" variant="primary">
+              Get started with Splito
+            </Button>
+          </Link>
         </div>
-
 
         {/* Dashboard Preview */}
         <div className="flex justify-center relative top-32">
