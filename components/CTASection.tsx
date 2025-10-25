@@ -14,7 +14,7 @@ const features = [
 
 export default function CTASection() {
   return (
-    <section className="relative mx-20 bg-[#09090B] rounded-[20px] overflow-hidden">
+    <section className="relative mx-4 md:mx-8 lg:mx-20 bg-[#09090B] rounded-[16px] md:rounded-[20px] overflow-hidden">
       {/* Background Patterns */}
       <div className="absolute inset-0">
         <Image
@@ -25,17 +25,16 @@ export default function CTASection() {
         />
       </div>
 
-      <div className="py-16 flex flex-col items-center justify-centers gap-8 relative z-10">
-        <h2 className="text-white text-4xl font-medium text-center font-general-sans">
+      <div className="py-8 md:py-12 lg:py-16 flex flex-col items-center justify-centers gap-6 md:gap-8 relative z-10 px-4">
+        <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium text-center font-general-sans">
           Best way to clear splits on-chain
         </h2>
 
-        <div className="flex flex-col items-center gap-[26px] ">
-          <div className="flex flex-col items-center gap-4">
-            {/* Feature 1 */}
+        <div className="flex flex-col items-center gap-4 md:gap-[26px]">
+          <div className="flex flex-col items-center gap-3 md:gap-4">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-4">
-                <span className="text-white text-md font-normal leading-[1.6] text-center font-inter">
+                <span className="text-white text-sm md:text-md font-normal leading-[1.6] text-center font-inter">
                   {feature}
                 </span>
               </div>

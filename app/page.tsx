@@ -19,7 +19,7 @@ export default function Home() {
       <FeaturesSection />
       <DashboardSection />
       <BenefitsSection />
-      <div className="py-[96px]">
+      <div className="py-12 md:py-16 lg:py-[96px]">
         <CTASection />
       </div>
       <Footer />

@@ -49,14 +49,12 @@ export default function BenefitsSection() {
   }, [progress, benefits.length, autoPlayInterval]);
 
   return (
-    <section className="relative py-32 bg-red">
-      {/* <SectionBackground /> */}
-
-      <div className="relative z-10 grid grid-cols-2">
+    <section className="relative py-12 md:py-24 lg:py-32 px-4">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
         {/* Left Content */}
-        <div className="p-20 sticky top-0 h-[555.56px]">
-          <div className="mb-10">
-            <h2 className="text-white text-[45px] font-medium leading-[1.493] tracking-[-2.67%] font-general-sans">
+        <div className="lg:p-20 lg:sticky lg:top-0 lg:h-[555.56px]">
+          <div className="mb-6 md:mb-10">
+            <h2 className="text-white text-2xl md:text-3xl lg:text-[45px] font-medium leading-[1.3] md:leading-[1.493] font-general-sans">
               Splito is the right way to clear your Splits
             </h2>
           </div>
@@ -84,14 +82,18 @@ export default function BenefitsSection() {
           </div>
         </div>
 
-        <div className={cn("relative overflow-hidden py-20")}>
+        <div
+          className={cn(
+            "relative overflow-hidden py-8 lg:py-20 min-h-[400px] md:min-h-[500px] lg:min-h-0"
+          )}
+        >
           <AnimatePresence mode="wait">
             {benefits.map(
               (benefit, index) =>
                 index === currentFeature && (
                   <motion.div
                     key={index}
-                    className="absolute inset-0 overflow-hidden"
+                    className="absolute inset-0 overflow-hidden flex items-center justify-center"
                     initial={{ y: 100, opacity: 0, rotateX: -20 }}
                     animate={{ y: 0, opacity: 1, rotateX: 0 }}
                     exit={{ y: -100, opacity: 0, rotateX: 20 }}
@@ -107,17 +109,6 @@ export default function BenefitsSection() {
             )}
           </AnimatePresence>
         </div>
-
-        {/* Right Content - Dashboard Previews */}
-        {/* <div className="">
-          {dashboards.map((dashboard, index) => (
-            <BrowserWindow
-              key={index}
-              imageSrc={dashboard.src}
-              imageAlt={dashboard.alt}
-            />
-          ))}
-        </div> */}
       </div>
     </section>
   );
