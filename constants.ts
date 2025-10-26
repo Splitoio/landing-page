@@ -1,1 +1,1 @@
-export const DASHBOARD_HOST = "http://localhost:3000/";
+export const DASHBOARD_HOST = "https://app.splito.io/";
